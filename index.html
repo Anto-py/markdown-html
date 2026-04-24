@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Texte → Markdown (.md)</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Texte → Markdown (.md)</title>
+<style>
     :root{--bg:#0f1220;--card:#151a2f;--ink:#e7eaf5;--muted:#93a0b5;--accent:#6ae3ff;}
     *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
     .container{max-width:1100px;margin:auto;padding:24px;display:grid;gap:16px}
@@ -28,16 +29,15 @@
   </style>
 </head>
 <body>
-  <div class="container" role="application" aria-label="Convertisseur texte vers Markdown">
-    <header>
-      <span class="dot" aria-hidden="true"></span>
-      <h1>Convertir un texte « normal » en <code>.md</code></h1>
-    </header>
-
-    <div class="grid">
-      <section class="card" aria-labelledby="inLabel">
-        <header><h2 id="inLabel">Texte d’entrée</h2></header>
-        <textarea id="input" placeholder="Collez ici votre texte brut.
+<div aria-label="Convertisseur texte vers Markdown" class="container" role="application">
+<header>
+<span aria-hidden="true" class="dot"></span>
+<h1>Convertir un texte « normal » en <code>.md</code></h1>
+</header>
+<div class="grid">
+<section aria-labelledby="inLabel" class="card">
+<header><h2 id="inLabel">Texte d’entrée</h2></header>
+<textarea id="input" placeholder="Collez ici votre texte brut.
 Exemple :
 COMPTE RENDU :
 - Introduction
@@ -45,30 +45,26 @@ COMPTE RENDU :
 1) Plan
 2) Budget
 Contact: contact@exemple.com ou www.monsite.fr"></textarea>
-      </section>
-
-      <section class="card" aria-labelledby="outLabel">
-        <header><h2 id="outLabel">Markdown généré</h2></header>
-        <pre id="output" aria-live="polite"></pre>
-      </section>
-    </div>
-
-    <div class="controls">
-      <input id="filename" type="text" placeholder="README" title="Nom du fichier (sans .md)" />
-      <button id="copyBtn" type="button">Copier le Markdown</button>
-      <button id="convertBtn" type="button">Convertir</button>
-      <button id="dlBtn" type="button" class="primary">Télécharger .md</button>
-    </div>
-    <p class="hint">Aucune donnée n’est envoyée — tout se passe dans votre navigateur. Hébergeable tel quel sur GitHub Pages.</p>
-    <footer>Règles : titre principal auto, sous-titres (MAJUSCULES/finissant par « : »), listes, liens & e-mails reconnus.</footer>
-  <div class="ab-attribution" style="text-align:center;margin-top:2rem;padding-top:1rem;border-top:1px solid rgba(128,128,128,0.25);font-size:0.8rem;opacity:0.65;">
-  <a href="https://www.linkedin.com/in/antonin-bareau/" target="_blank" rel="noopener" style="font-weight:bold;color:inherit;text-decoration:none;">Antonin Bareau</a>
-  &nbsp;&mdash;&nbsp;
-  <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Licence CC BY-SA 4.0</a>
+</section>
+<section aria-labelledby="outLabel" class="card">
+<header><h2 id="outLabel">Markdown généré</h2></header>
+<pre aria-live="polite" id="output"></pre>
+</section>
 </div>
+<div class="controls">
+<input id="filename" placeholder="README" title="Nom du fichier (sans .md)" type="text"/>
+<button id="copyBtn" type="button">Copier le Markdown</button>
+<button id="convertBtn" type="button">Convertir</button>
+<button class="primary" id="dlBtn" type="button">Télécharger .md</button>
 </div>
-
-  <script>
+<p class="hint">Aucune donnée n’est envoyée — tout se passe dans votre navigateur. Hébergeable tel quel sur GitHub Pages.</p>
+<footer>Règles : titre principal auto, sous-titres (MAJUSCULES/finissant par « : »), listes, liens &amp; e-mails reconnus.</footer>
+<div class="ab-attribution" style="text-align:center;margin-top:2rem;padding-top:1rem;border-top:1px solid rgba(128,128,128,0.25);font-size:0.8rem;opacity:0.65;">
+<a href="https://www.linkedin.com/in/antonin-bareau/" rel="noopener" style="font-weight:bold;color:inherit;text-decoration:none;" target="_blank">Antonin Bareau</a>
+   — 
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener" style="color:inherit;text-decoration:none;" target="_blank">Licence CC BY-SA 4.0</a>
+</div></div>
+<script>
     const $ = s => document.querySelector(s);
     const $in = $('#input'), $out = $('#output');
     const $name = $('#filename'), $convert = $('#convertBtn'), $dl = $('#dlBtn'), $copy = $('#copyBtn');
@@ -217,6 +213,5 @@ Introduction et objectifs de la réunion
 Contacts: contact@exemple.com et www.monsite.fr`;
     run();
   </script>
-
 </body>
 </html>
